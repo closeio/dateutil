@@ -47,9 +47,12 @@ README = README()  # NOQA
 
 
 setup(
-      use_scm_version={
-          'write_to': 'src/dateutil/_version.py',
-      },
+      #use_scm_version={
+      #    'write_to': 'src/dateutil/_version.py',
+      #},
+      # NOTE: different from upstream - version is hardcoded so that the
+      # package can be fetched as a ZIP archive by pip
+      version='2.8.2+close',
       ## Needed since doctest not supported by PyPA.
       long_description = README,
       cmdclass={
